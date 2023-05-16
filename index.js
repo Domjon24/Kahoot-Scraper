@@ -43,8 +43,8 @@ const puppeteer = require("puppeteer");
     await page.waitForSelector("#username")
     await page.type("#username", "Beyonce", {delay: 100});
     await page.type("#password", "1234", {delay: 100});
-    await page.screenshot({path: "TestScreenshot.png"})
-    await browser.close();
+    // await browser.close();
+    setTimeout(() => { browser.close(); }, 3000);  
 })
 
 ()
